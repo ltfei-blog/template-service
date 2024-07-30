@@ -1,0 +1,12 @@
+{
+  "name": "@your-project-name/service-router",
+  "type": "module",
+  "dependencies": {
+    "@your-project-name/service-app": "workspace:^",
+    "@your-project-name/service-config": "workspace:^",
+    "@your-project-name/service-db": "workspace:^",
+    "@your-project-name/service-permission": "workspace:^",
+    "@your-project-name/service-router": "workspace:^",
+    "@your-project-name/service-utils": "workspace:^"
+  }
+}
