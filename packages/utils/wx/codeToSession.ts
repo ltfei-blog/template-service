@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { getConfig } from '@your-project-name/service-config'
+import { getConfig } from '@/config'
 
 // todo: 调用时检查配置是否开启微信登录
 const { appid, secret } = await getConfig('login_method', 'wx_miniprogram')

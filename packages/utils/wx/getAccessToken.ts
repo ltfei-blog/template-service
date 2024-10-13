@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { getConfig } from '@your-project-name/service-config'
+import { getConfig } from '@/config'
 
 const { appid, secret } = await getConfig('login_method', 'wx_miniprogram')
 

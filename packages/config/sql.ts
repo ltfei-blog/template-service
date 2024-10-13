@@ -1,5 +1,5 @@
 import { Config as ConfigType, GetConfig, DeepPartial } from './types'
-import { Config } from '@your-project-name/service-db'
+import { Config } from '@/db'
 
 // 整组的缓存
 const caches_group: DeepPartial<ConfigType> = {}

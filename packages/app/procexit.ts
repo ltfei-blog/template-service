@@ -1,6 +1,6 @@
 import readline from 'node:readline/promises'
 import { stdin as input, stdout as output, exit } from 'node:process'
-import { sequelize } from '@your-project-name/service-db'
+import { sequelize } from '@/db'
 
 /**
  * https://nodejs.cn/api/readline.html#readline_event_sigint

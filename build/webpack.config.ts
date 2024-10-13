@@ -1,7 +1,8 @@
 import { resolve } from 'path'
 // import { readdirSync } from 'node:fs'
-import { Configuration } from 'webpack'
+import { Configuration, Compiler } from 'webpack'
 import nodeExternals from 'webpack-node-externals'
+import { copyPakcageFile } from './copyPakcageFile'
 
 const path = resolve(__dirname, '..', 'packages')
 // const packages = readdirSync(path)
@@ -31,8 +32,22 @@ export default <Configuration>{
       })
     }
   ],
+  plugins: [
+    {
+      apply(compiler: Compiler) {
+        compiler.hooks.done.tapPromise('AfterBuildPlugin', async (stats) => {
+          const from = resolve(path, '..', 'package.json')
+          const to = resolve(__dirname, '..', 'dist', 'package.json')
+          await copyPakcageFile(from, to)
+        })
+      }
+    }
+  ],
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
+    alias: {
+      '@': resolve(path)
+    }
   },
   target: 'node',
   module: {

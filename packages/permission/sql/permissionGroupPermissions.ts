@@ -1,4 +1,4 @@
-import { Permissions, PermissionsTable } from '@your-project-name/service-db'
+import { Permissions, PermissionsTable } from '@/db'
 
 const cach = new Map<number, PermissionsTable[]>()
 

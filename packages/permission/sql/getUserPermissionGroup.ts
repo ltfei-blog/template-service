@@ -1,7 +1,4 @@
-import {
-  PermissionUserGroup,
-  PermissionUserGroupTable
-} from '@your-project-name/service-db'
+import { PermissionUserGroup, PermissionUserGroupTable } from '@/db'
 
 const cach = new Map<number, number[]>()
 

@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
-import { getConfig } from '@your-project-name/service-config'
-import type { TokenUser } from '@your-project-name/service-app/types'
+import { getConfig } from '@/config'
+import type { TokenUser } from '@/app/types'
 
 export const createUserToken = async (user: TokenUser) => {
   const secret = await getConfig('app', 'jwtSecret')

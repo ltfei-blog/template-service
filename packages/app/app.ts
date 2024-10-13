@@ -1,15 +1,15 @@
-import { getConfig } from '@your-project-name/service-config'
+import { getConfig } from '@/config/'
 import express from 'express'
-import router from '@your-project-name/service-router'
+import router from '@/routers/'
 import bodyParser from 'body-parser'
 import { expressjwt as jwt } from 'express-jwt'
 import jwtUnless from './jwtUnless'
-import { app as logger } from '@your-project-name/service-utils/log'
+import { app as logger } from '@/utils/log'
 import cors from 'cors'
 import { Request } from './types'
 import './procexit'
-import { createUserToken } from '@your-project-name/service-utils/token'
-import { validate } from '@your-project-name/service-utils/validate'
+import { createUserToken } from '@/utils/token'
+import { validate } from '@/utils/validate'
 const t = await createUserToken({
   id: 1
 })

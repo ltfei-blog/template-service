@@ -1,4 +1,4 @@
-import type { Request } from '@your-project-name/service-app/types'
+import type { Request } from '@/app/types'
 import { Response, NextFunction } from 'express'
 import joi from 'joi'
 

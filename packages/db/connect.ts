@@ -1,6 +1,6 @@
-import { getLocalConfig } from '@your-project-name/service-config/getLocalConfig'
+import { getLocalConfig } from '@/config/getLocalConfig'
 import { Sequelize } from 'sequelize'
-import { db as logger } from '@your-project-name/service-utils/log'
+import { db as logger } from '@/utils/log'
 
 const sqlType = await getLocalConfig('sql', 'type')
 

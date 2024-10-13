@@ -1,4 +1,4 @@
-import type { PermissionGroupsTable } from '@your-project-name/service-db'
+import type { PermissionGroupsTable } from '@/db'
 import { getPermissionGroup } from '../sql/getPermissionGroup'
 
 /**

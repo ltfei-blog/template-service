@@ -1,5 +1,5 @@
 import type { Response, NextFunction } from 'express'
-import type { Request } from '@your-project-name/service-app/types'
+import type { Request } from '@/app/types'
 import { Permission } from './permissionsList'
 import { getUserPermission } from './getUserPermission'
 

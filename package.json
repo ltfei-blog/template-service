@@ -7,18 +7,15 @@
     "prepare": "husky install",
     "cz": "git-cz",
     "format": "prettier --write --cache .",
-    "dev": "nodemon -x node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm packages/app/app.ts",
-    "start": "ts-node-esm --experimental-specifier-resolution=node packages/app/app.ts",
+    "dev": "tsx watch packages/app/app.ts",
+    "start": "tsx packages/app/app.ts",
     "build": "pnpm -C build exec webpack"
   },
   "keywords": [],
   "author": "ltfei<ltfei@ltfei.cn>",
   "license": "GPL",
   "repository": "https://github.com/your-project-name/service",
-  "workspaces": [
-    "packages/*",
-    "build"
-  ],
+  "type": "module",
   "lint-staged": {
     "*.{vue,js,ts,jsx,tsx,md,json}": "prettier --write"
   },
@@ -46,8 +43,8 @@
     "lint-staged": "^13.2.2",
     "nodemon": "^2.0.22",
     "prettier": "^3.0.0",
-    "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.19.1",
     "typescript": "^5.1.6"
   },
   "dependencies": {

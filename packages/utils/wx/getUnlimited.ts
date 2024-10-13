@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { getAccessToken } from './getAccessToken'
-import { getConfig } from '@your-project-name/service-config'
+import { getConfig } from '@/config'
 
 const { env_version } = await getConfig('login_method', 'wx_miniprogram')
 
